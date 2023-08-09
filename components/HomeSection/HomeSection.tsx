@@ -10,15 +10,15 @@ import NodeJs from "@/assests/Node.js_logo.svg"
 
 export default function HomeSection() {
     return (
-        <div className="pt-[40%] font-mono flex flex-col min-h-screen box-border justify-around items-start text-gray-500 md:pt-[10%]" id="home">
+        <div className="pt-[40%] font-mono flex flex-col min-h-screen box-border justify-around items-start text-gray-500 md:pt-[12%]" id="home">
             <div className="items-start pl-5">
                 <div className="col-span-2 flex flex-col justify-around h-full">
                     <div className="w-[100%]">
                         <h2 className="text-start my-3 font-bold sm:text-[25px] text-gray-900">Hola :</h2>
-                        <h1 className='ml-4 mb-10 sm:text-[35px] text-orange-500'>Mi nombre es Ismael Diaz, un apacionado del...</h1>
+                        <h1 className='ml-4 my-10 sm:text-[35px] text-orange-500'>Mi nombre es Ismael Diaz, un apacionado del...</h1>
                         <h1 className="shadow-2xl rounded-full text-[24px] sm:text-[80px] font-extrabold px-10 md:px-20 mb-5 underline decoration-orange-500">Desarrollo Web</h1>
                     </div>
-                    <div className="flex mb-10 gap-5 text-blue-400">
+                    <div className="flex mt-10 gap-5 text-blue-400">
                         <h1 className='text-[16px] text-gray-500 font-bold'>Contactos:</h1>
                         <a href="https://www.linkedin.com/in/ismael-diaz-3b440b27a" target='blank'>
                             <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" className=" hover:text-slate-500 transition-all duration-300" viewBox="0 0 16 16">
@@ -40,7 +40,7 @@ export default function HomeSection() {
                 </div>
             </div>
             <div className=' flex flex-col pl-5'>
-                <h2 className="font-bold mb-6">Tecnologias:</h2>
+                <h2 className="font-bold mb-4 mt-10">Tecnologias:</h2>
                 <div className="grid grid-cols-3 md:grid-cols-7 gap-8">
                     <Image src={Html} alt="Html" title="html" className="h-[65px] w-[65px] object-scale-down mx-[5%] " />
                     <Image src={Css} alt="Css" title="css" className="h-[65px] w-[65px] object-scale-down mx-[5%]" />
