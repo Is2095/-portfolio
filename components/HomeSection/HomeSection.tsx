@@ -10,7 +10,7 @@ import NodeJs from "@/assests/Node.js_logo.svg"
 
 export default function HomeSection() {
     return (
-        <div className="mb-[0px] font-mono flex flex-col min-h-screen box-border justify-center items-start text-gray-500" id="home">
+        <div className="pt-[40%] font-mono flex flex-col min-h-screen box-border justify-around items-start text-gray-500 md:pt-[10%]" id="home">
             <div className="items-start pl-5">
                 <div className="col-span-2 flex flex-col justify-around h-full">
                     <div className="w-[100%]">
