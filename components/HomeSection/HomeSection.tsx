@@ -15,7 +15,7 @@ export default function HomeSection() {
                 <div className="col-span-2 flex flex-col justify-around h-full">
                     <div className="w-[100%]">
                         <h2 className="text-start my-3 font-bold sm:text-[25px] text-gray-900">Hola :</h2>
-                        <h1 className='ml-4 my-10 sm:text-[35px] text-orange-500'>Mi nombre es Ismael Diaz, un apacionado del...</h1>
+                        <h1 className='ml-4 my-10 sm:text-[35px] text-orange-500'>Mi nombre es Ismael Diaz, un apasionado del...</h1>
                         <h1 className="shadow-2xl rounded-full text-[24px] sm:text-[80px] font-extrabold px-10 md:px-20 mb-5 underline decoration-orange-500">Desarrollo Web</h1>
                     </div>
                     <div className="flex mt-10 gap-5 text-blue-400">
