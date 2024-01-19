@@ -153,7 +153,7 @@ export default function Project() {
 
                                     </div>
                                 </a>
-                                <a href={"https://github.com/Is2095/authentication_email"} className='w-full h-8 pl-10 m-4 text-blue-800 text-lg font-semibold hover:text-gray-500 transition-all duration-300 w-[90px] flex items-center gap-1 ' target='blank'>
+                                <a href={"https://github.com/Is2095/bienvenido_sql"} className='w-full h-8 pl-10 m-4 text-blue-800 text-lg font-semibold hover:text-gray-500 transition-all duration-300 w-[90px] flex items-center gap-1 ' target='blank'>
                                     * Repositorio de: Bienvenido a SQL.
                                     <div className="px-2 rounded-full">
                                         <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="48" height="48" viewBox="0 0 48 48">
