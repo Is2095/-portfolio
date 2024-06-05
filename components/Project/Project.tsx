@@ -3,6 +3,7 @@ import Image from "next/image";
 import video from "@/assests/3562.jpg";
 import rick from "@/assests/fondoPantalla1.jpg";
 import nextauth from "@/assests/nextauth_email.png"
+import biblioteca from "@/assests/biblioteca.jpg"
 
 export default function Project() {
     return (
@@ -124,6 +125,37 @@ export default function Project() {
                         </div>
                     </div>
                     <Image src={nextauth} alt="not found" className="h-[80%] w-[90%] rounded-3xl mt-8 lg:mt-0"></Image>
+                </div>
+                <div className="border"></div>
+                <div className='min-h-[50vh] font-serif flex flex-col-reverse mx-3 md:grid md:grid-cols-2 bg-white items-center rounded-[50px] overflow-hidden'>
+                    <div className='p-10 flex flex-col h-full items-start'>
+                        <h3 className='font-semibold font-self text-xl py-4'>
+                            Biblioteca Digital
+                        </h3>
+                        <p className='text-start py-4 font-self'>
+                            Este proyecto fue desarrollado como parte del curso de Desarrollo Full Stack Node.js en CodoACodo, donde trabajamos en equipo para implementar una aplicación de biblioteca digital del lado del Front End.
+                            <br />
+                            <br />
+                            Entre las funcionalidades que tiene, se encuentra la exploración de una amplia variedad de libros organizados por diferentes temáticas, la posibilidad del contacto con los responsables, las novedades de ingreso a la biblioteca, y la información del equipo y la posibilidad de contactar para convertirse en embajador de la biblioteca localmente.
+                            <br />
+                            <br />
+                            Con diseño amigable y fácil de navegar, garantiza una excelente experiencia; completamente adaptable, se puede utilizar en dispositivos móviles, tablet y equipos de escritorio.
+                            <br />
+                            <br />
+                            Tecnologías utilizadas: <b> HTML 5, CSS, BOOTSTRAP, JavaScript</b>
+                        </p>
+                        <div className='flex gap-3 pt-6'>
+                        <a href={"https://is2095.github.io/Biblioteca-Virtual"} className='text-blue-600 font-semibold hover:text-gray-500 transition-all duration-300 w-[90px] flex items-center gap-1' target='blank'>
+                                Pagina
+                                <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" fill="currentColor" className="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
+                                    <path fillRule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z" />
+                                    <path fillRule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z" />
+                                </svg>
+                            </a>
+
+                        </div>
+                    </div>
+                    <Image src={biblioteca} alt="not found" className="h-[80%] w-[90%] rounded-3xl mt-8 lg:mt-0"></Image>
                 </div>
                 <div className="border"></div>
                 <div className='min-h-[50vh] font-serif flex flex-col-reverse mx-3 md:grid md:grid-cols-2 bg-white items-center rounded-[50px] overflow-hidden'>
