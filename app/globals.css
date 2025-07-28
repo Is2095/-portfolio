@@ -1,8 +1,17 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
-body {
- 
-  background: linear-gradient(to right, rgb(240, 239, 239), rgb(230, 228, 228));
+@theme {
+  --color-primary: #007AFF;
+  --color-secundary: #6B7280;
+  --color-dark: #1F2937;
+  --color-light: #F9FAFB;
+  --color-text: #000000;
+  --color-bg: #ffffff;
+  --font-sans: 'Inter', sans-serif;
+}
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+html {
+  scroll-behavior: smooth;
 }

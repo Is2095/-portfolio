@@ -1,0 +1,30 @@
+[
+  {
+    "language": "TypeScript",
+    "value": 27
+  },
+  {
+    "language": "JavaScript",
+    "value": 29
+  },
+  {
+    "language": "CSS",
+    "value": 16
+  },
+  {
+    "language": "HTML",
+    "value": 13
+  },
+  {
+    "language": "Python",
+    "value": 5
+  },
+  {
+    "language": "Java",
+    "value": 9
+  },
+  {
+    "language": "Otros",
+    "value": 1
+  }
+]

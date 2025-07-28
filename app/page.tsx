@@ -1,20 +1,17 @@
-import Image from 'next/image'
-import NavBar from '@/components/NavBar/NavBar'
-import HomeSection from '@/components/HomeSection/HomeSection'
-import About from '@/components/About/About'
-import Project from '@/components/Project/Project'
-import Footer from '@/components/Footer/Footer'
+import AcercaDe from "@/app/components/AcercaDe"
+import Experiencia from "@/app/components/Experiencia"
+import Inicio from "@/app/components/Inicio"
+import Proyectos from "@/app/components/Proyectos"
+import Tecnologias from "@/app/components/Tecnologias"
 
 export default function Home() {
   return (
-    <main className='flex flex-col min-h-screen'>
-      <NavBar/>
-      <div className='container m-auto'>
-        <HomeSection/>
-        <About/>
-        <Project/>
-      </div>
-      <Footer/>
-    </main>
-     )
+    <>
+      <Inicio />
+      <Experiencia/>
+      <Proyectos/>
+      <AcercaDe/>
+      <Tecnologias/>
+    </>
+  );
 }
