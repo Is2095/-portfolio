@@ -7,7 +7,7 @@ const Inicio = () => {
   return (
     <header
       id="inicio"
-      className="scroll-mt-24 py-16t min-h-[50vh] xl:min-h-[80vh] lg:py-6 w-full px-6 lg:px-12 xl:px-30 2xl:px-30 mx-auto max-w-[1920px]"
+      className="scroll-mt-24 py-16t xl:min-h-[60vh] lg:py-6 w-full px-6 lg:px-12 xl:px-30 2xl:px-30 mx-auto max-w-[1920px]"
     >
       <div className="flex flex-col-reverse gap-8 lg:flex-row items-center lg:items-start md:gap-16 2xl:gap-0 w-full 2xl:px-10 h-full lg:justify-center">
         <div className="w-full lg:w-2/3 flex flex-col gap-y-1 md:gap-y-4 lg:gap-y-5 2xl:gap-14">

@@ -4,7 +4,7 @@ import { experiencias } from "@/app/datos/experienciasDatos";
 const Experiencia = () => {
   return (
     <section
-      className="py-24 container xl:min-h-[80vh] max-w-2xl md:max-w-2xl xl:max-w-7xl mx-auto px-4"
+      className="py-24 container xl:min-h-[70vh] max-w-2xl md:max-w-2xl xl:max-w-7xl mx-auto px-4"
       id="experiencia"
       aria-labelledby="titulo-experiencia"
     >

@@ -3,7 +3,7 @@ import React from "react";
 const AcercaDe = () => {
   return (
     <section
-      className="py-24 container xl:min-h-[80vh] max-w-4xl mx-auto px-4 2xl:min-h-[95vh]"
+      className="py-24 container xl:min-h-[70vh] max-w-4xl mx-auto px-4"
       id="acercade"
       aria-labelledby="titulo-acercade"
     >
