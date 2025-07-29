@@ -14,7 +14,10 @@ const useActiveSection = () => {
         if (entry.isIntersecting) {
           const elementId = entry.target.id;
 
-          if (elementId && secciones_para_ver_scroll.includes(elementId as SectionId)) {
+          if (
+            elementId &&
+            secciones_para_ver_scroll.includes(elementId as SectionId)
+          ) {
             const newActive = `#${elementId}`;
 
             if (newActive !== activeSection) {
@@ -29,15 +32,18 @@ const useActiveSection = () => {
 
   useEffect(() => {
     const observer = new IntersectionObserver(handleIntersection, {
-      threshold: 0.1,
+      threshold: 0,
+      rootMargin: "-20% 0px -60% 0px",
     });
 
     observerRef.current = observer;
 
-    const sections = secciones_para_ver_scroll.map((id) => {
-      const element = document.getElementById(id);
-      return element;
-    }).filter(Boolean) as HTMLElement[];
+    const sections = secciones_para_ver_scroll
+      .map((id) => {
+        const element = document.getElementById(id);
+        return element;
+      })
+      .filter(Boolean) as HTMLElement[];
 
     sections.forEach((section) => {
       if (section) {

@@ -4,13 +4,13 @@ import { experiencias } from "@/app/datos/experienciasDatos";
 const Experiencia = () => {
   return (
     <section
-      className="py-24 container min-h-[95vh] max-w-2xl md:max-w-2xl xl:max-w-7xl mx-auto px-4"
+      className="py-24 container xl:min-h-[80vh] max-w-2xl md:max-w-2xl xl:max-w-7xl mx-auto px-4"
       id="experiencia"
       aria-labelledby="titulo-experiencia"
     >
       <h2
         id="titulo-experiencia"
-        className="text-3xl font-bold mb-12 text-center"
+        className="text-3xl font-bold mb-12 text-center xl:text-4xl 2xl:text-5xl"
       >
         Experiencia
       </h2>

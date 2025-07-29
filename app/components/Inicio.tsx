@@ -7,19 +7,19 @@ const Inicio = () => {
   return (
     <header
       id="inicio"
-      className="scroll-mt-24 py-16t lg:py-24 min-h-[80vh] w-full px-6 lg:px-12 xl:px-30 2xl:px-30 mx-auto max-w-[1920px]"
+      className="scroll-mt-24 py-16t min-h-[50vh] xl:min-h-[80vh] lg:py-6 w-full px-6 lg:px-12 xl:px-30 2xl:px-30 mx-auto max-w-[1920px]"
     >
-      <div className="flex flex-col-reverse lg:flex-row items-center lg:items-start gap-14 md:gap-16 2xl:gap-0 w-full 2xl:px-10 h-full lg:justify-center">
+      <div className="flex flex-col-reverse gap-8 lg:flex-row items-center lg:items-start md:gap-16 2xl:gap-0 w-full 2xl:px-10 h-full lg:justify-center">
         <div className="w-full lg:w-2/3 flex flex-col gap-y-1 md:gap-y-4 lg:gap-y-5 2xl:gap-14">
-          <h1 className="text-4xl font-bold text-gray-700 lg:text-5xl 2xl:text-7xl dark:text-gray-300 md:font-bold mb-3">
+          <h1 className="text-4xl font-bold text-gray-700 text-center md:text-left lg:text-5xl 2xl:text-7xl dark:text-gray-300 md:font-bold mb-3">
             <span className="text-primary">Ismael Diaz</span>
           </h1>
 
-          <p className="text-2xl lg:text-3xl 2xl:text-5xl font-bold text-gray-600 dark:text-[rgb(179,189,209)] mb-4">
+          <p className="text-center md:text-left text-2xl lg:text-3xl 2xl:text-5xl font-bold text-gray-600 dark:text-[rgb(179,189,209)] mb-4">
             Desarrollador Backend
           </p>
 
-          <p className="text-base lg:text-lg 2xl:text-2xl font-light leading-relaxed  dark:text-[rgb(162,164,169)] mb-4">
+          <p className="text-center md:text-left text-base lg:text-lg 2xl:text-2xl font-light leading-relaxed  dark:text-[rgb(162,164,169)] mb-4">
             Tengo experiencia aplicando tecnologías como Node.js, Java, y base
             de datos SQL y NoSQL. Me especializo en construir APIs robustas,
             soluciones efecientes y arquitecturas escalables, aplicando buenas

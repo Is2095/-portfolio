@@ -26,13 +26,13 @@ const Tecnologias = () => {
   const textoColor = tema === "dark" ? "#ffffff" : "#000000";
   return (
     <section
-      className="py-20 container max-w-2xl md:max-w-2xl xl:max-w-7xl mx-auto px4"
+      className="py-20 container xl:min-h-[80vh] max-w-2xl md:max-w-2xl xl:max-w-7xl mx-auto px4 "
       id="tecnologias"
       aria-labelledby="titulo-tecnologias"
     >
       <h2
         id="titulo-tecnologias"
-        className="text-3xl font-bold mb-12 text-center"
+        className="text-3xl font-bold mb-12 text-center xl:text-4xl 2xl:text-5xl"
       >
         Tecnologías
       </h2>

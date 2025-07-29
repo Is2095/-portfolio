@@ -3,11 +3,11 @@ import React from "react";
 const AcercaDe = () => {
   return (
     <section
-      className="py-24 container max-w-4xl mx-auto px-4 min-h-fit 2xl:min-h-[95vh]"
+      className="py-24 container xl:min-h-[80vh] max-w-4xl mx-auto px-4 2xl:min-h-[95vh]"
       id="acercade"
       aria-labelledby="titulo-acercade"
     >
-      <h2 id="titulo-acercade" className="text-3xl font-bold mb-12 text-center">
+      <h2 id="titulo-acercade" className="text-3xl font-bold mb-12 text-center xl:text-4xl 2xl:text-5xl">
         Acerca de mi
       </h2>
 
