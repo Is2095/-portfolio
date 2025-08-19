@@ -1,15 +1,15 @@
 [
   {
     "language": "TypeScript",
-    "value": 32
+    "value": 40
   },
   {
     "language": "CSS",
-    "value": 15
+    "value": 16
   },
   {
     "language": "JavaScript",
-    "value": 27
+    "value": 18
   },
   {
     "language": "HTML",
@@ -17,14 +17,10 @@
   },
   {
     "language": "Python",
-    "value": 4
+    "value": 5
   },
   {
     "language": "Java",
-    "value": 9
-  },
-  {
-    "language": "Otros",
-    "value": 1
+    "value": 10
   }
 ]

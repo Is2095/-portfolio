@@ -1,3 +1,68 @@
+"use client";
+import { useEffect, useState, useRef } from "react";
+import { secciones_para_ver_scroll } from "@/app/constantes";
+
+type SectionId = (typeof secciones_para_ver_scroll)[number];
+
+const useActiveSection = () => {
+  const [activeSection, setActiveSection] = useState<string>(""); // guarda el id de la sección actual más visible.
+  const observerRef = useRef<IntersectionObserver | null>(null); // guarda la instancia del IntersectionObserver
+  const visibilityMap = useRef<Map<string, number>>(new Map()); // guarda el porcentaje de visibilidad (inersectionRatio) de cada sección visible
+
+  useEffect(() => {
+    const handleIntersections = (entries: IntersectionObserverEntry[]) => {
+      visibilityMap.current.clear();
+      entries.forEach((entry) => {
+        // recorremos todas las entradas "entries" observadas
+        const id = entry.target.id;
+        const ratio = entry.intersectionRatio;
+
+        // Solo consideramos secciones válidas
+        if (secciones_para_ver_scroll.includes(id as SectionId)) {
+          visibilityMap.current.set(id, ratio); // si el id está incluida en "secciones_para_ver_scroll" guarda su visibilidad (ratio) en el Map
+        }
+      });
+
+      // Elegimos la sección con mayor intersección
+      const mostVisible = Array.from(visibilityMap.current.entries()).sort(
+        (a, b) => b[1] - a[1]
+      )[0]; // se ordenan las secciones más visibles por el ratio en forma descendente y elige la más visible [0]
+
+      if (mostVisible) {
+        const [id, ratio] = mostVisible;
+        const newActive = `#${id}`;
+
+        if (ratio > 0 && newActive !== activeSection) {
+          // si la sección visible es distinta dela que estaba activa, actualiza activeSection y actualiza la url
+          setActiveSection(newActive);
+          window.history.replaceState(null, "", newActive);
+        }
+      }
+    };
+
+    const observer = new IntersectionObserver(handleIntersections, {
+      threshold: Array.from({ length: 11 }, (_, i) => i / 10), // crea una nueva instancia de IntersectionObserver y le dá los parámetros de visibilidad del componente, en este caso va a observar [0%, 0.1%, 0.2%, ..., 1.0%]
+      rootMargin: "0px 0px 0px 0px",
+    });
+
+    observerRef.current = observer;
+
+    const sections = secciones_para_ver_scroll
+      .map((id) => document.getElementById(id))
+      .filter(Boolean) as HTMLElement[];
+
+    sections.forEach((section) => observer.observe(section));
+
+    return () => {
+      sections.forEach((section) => observer.unobserve(section)); // con esto pedimos que no se observe más a los elementos
+      observer.disconnect(); // detiene todas las observaciones activas
+    };
+  }, [activeSection]);
+
+  return activeSection; // retornamos la sección activa
+};
+
+export default useActiveSection;
 // "use client";
 // import { useEffect, useState, useCallback, useRef } from "react";
 // import { secciones_para_ver_scroll } from "@/app/constantes";
@@ -134,66 +199,3 @@ const useActiveSection = () => {
 };
 
 export default useActiveSection;*/
-"use client";
-import { useEffect, useState, useRef } from "react";
-import { secciones_para_ver_scroll } from "@/app/constantes";
-
-type SectionId = (typeof secciones_para_ver_scroll)[number];
-
-const useActiveSection = () => {
-  const [activeSection, setActiveSection] = useState<string>("");
-  const observerRef = useRef<IntersectionObserver | null>(null);
-  const visibilityMap = useRef<Map<string, number>>(new Map());
-
-  useEffect(() => {
-    const handleIntersections = (entries: IntersectionObserverEntry[]) => {
-      entries.forEach((entry) => {
-        const id = entry.target.id;
-        const ratio = entry.intersectionRatio;
-
-        // Solo consideramos secciones válidas
-        if (secciones_para_ver_scroll.includes(id as SectionId)) {
-          visibilityMap.current.set(id, ratio);
-        }
-      });
-
-      // Elegimos la sección con mayor intersección
-      const mostVisible = Array.from(visibilityMap.current.entries()).sort(
-        (a, b) => b[1] - a[1]
-      )[0];
-
-      if (mostVisible) {
-        const [id, ratio] = mostVisible;
-        const newActive = `#${id}`;
-
-        if (ratio > 0 && newActive !== activeSection) {
-          setActiveSection(newActive);
-          window.history.replaceState(null, "", newActive);
-        }
-      }
-    };
-
-    const observer = new IntersectionObserver(handleIntersections, {
-      threshold: Array.from({ length: 11 }, (_, i) => i / 10), // [0, 0.1, ..., 1]
-      rootMargin: "0px 0px 0px 0px",
-    });
-
-    observerRef.current = observer;
-
-    const sections = secciones_para_ver_scroll
-      .map((id) => document.getElementById(id))
-      .filter(Boolean) as HTMLElement[];
-
-    sections.forEach((section) => observer.observe(section));
-
-    return () => {
-      sections.forEach((section) => observer.unobserve(section));
-      observer.disconnect();
-      // visibilityMap.current.clear();
-    };
-  }, [activeSection]);
-
-  return activeSection;
-};
-
-export default useActiveSection;

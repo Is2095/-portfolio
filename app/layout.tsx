@@ -32,7 +32,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable}  antialiased bg-white transition-colors dark:bg-gray-900 dark:text-white`}
       >
         <Providers>
-          <ScrollToHash  smooth={false} />
+          <ScrollToHash/>
           <Navbar />
           <main className="min-h-screen pt-24">{children}</main>
           <Footer />
