@@ -6,6 +6,7 @@ export const menuNavbar: MenuItems[] = [
   { href: "#proyectos", label: "Proyectos" },
   { href: "#acercade", label: "Acerca de mí" },
   { href: "#tecnologias", label: "Tecnologías" },
+  { href: "#cursosCertificaciones", label: "Cursos" },
 ];
 
 export const colorsGraficoTecnologiasGithub = [
@@ -32,4 +33,5 @@ export const secciones_para_ver_scroll = [
   "proyectos",
   "acercade",
   "tecnologias",
+  "cursosCertificaciones"
 ] as const;

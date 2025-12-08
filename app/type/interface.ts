@@ -29,3 +29,13 @@ export interface ProyectosData {
   imagen: StaticImageData;
   fecha: string;
 }
+
+export interface CursosCertificados {
+  id: number;
+  titulo: string;
+  plataforma: string;
+  tipoCursado: string;
+  anio: number;
+  imagen: StaticImageData;
+  link?: string;
+}

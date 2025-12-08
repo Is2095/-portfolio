@@ -7,6 +7,12 @@ import game from "@/app/imagenes/game.webp"
 import logoParcels from "@/app/imagenes/logoParcels.webp"
 import nextauth_email from "@/app/imagenes/nextauth_email.webp"
 
+import armadoReparacionPC from "@/app/imagenes/armado_reparacion_pc_publico.webp"
+import proyecto40 from "@/app/imagenes/proyecto4-0.webp"
+import  disenoUX_UI from "@/app/imagenes/DISEÑO UX_UI.webp"
+import CAC from "@/app/imagenes/Diploma_CAC_publico.webp"
+import certificadoScrum from "@/app/imagenes/certificateSCRUM.webp"
+
 export const imagenesProyectos = {
   elPais,
   biblioteca,
@@ -16,4 +22,12 @@ export const imagenesProyectos = {
   game,
   logoParcels,
   nextauth_email
+}
+
+export const imagenesCursosCertificaciones = {
+  armadoReparacionPC,
+  proyecto40,
+  disenoUX_UI,
+  CAC,
+  certificadoScrum
 }
